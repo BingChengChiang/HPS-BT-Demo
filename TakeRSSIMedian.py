@@ -21,13 +21,13 @@ count = 0
 dbList = []
 
 InputDeviceName = input("Please Enter Device Name: ")
-
+SampleInterval = input("Input the sample interval (time): ")
 
 
 while True: 
 
     scanner = Scanner().withDelegate(ScanDelegate())
-    devices = scanner.scan(1.0)
+    devices = scanner.scan(float(SampleInterval))
     count += 1
     n=0
     addr = []
